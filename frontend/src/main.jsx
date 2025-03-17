@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './fixes.css'; // Import the fixes CSS file
 import './production.css'; // Import consolidated production CSS
+import './background-fix.css'; // Critical background fixes with highest priority
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
