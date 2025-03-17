@@ -6,4541 +6,986 @@
 
 main {
   flex: 1;
+  padding-bottom: 2rem;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: rgba(18, 18, 18, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+  padding: 0.5rem 1rem;
 }
 
 .navbar-brand {
-  font-weight: bold;
-  color: var(--primary-color);
-}
-
-.navbar-brand i {
-  color: var(--secondary-color);
-  margin-right: 8px;
-}
-
-/* Form label readability */
-.form-check-label, .form-label {
-  color: #000000;
-  font-weight: 500;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-/* Dashboard specific styles */
-.dashboard-title {
-  color: #ffffff; /* White color for 'User Dashboard' */
-}
-
-.dashboard-form-label {
-  color: #000000; /* Black color for form labels */
-  font-weight: 500;
-}
-
-.dashboard-form-check-label {
-  color: #000000; /* Black color for form check labels */
-  font-weight: 500;
-}
-
-/* Heading enhancements */
-h1, h2, h3, h4, h5, h6 {
-  color: #ffffff;
-}
-
-.auth-form h1, .auth-form h2, .auth-form h3, .auth-form h4, .auth-form h5, .auth-form h6 {
-  color: #000000;
-}
-
-.hero-section {
-  background-color: rgba(18, 18, 18, 0.3);
-  color: white;
-  padding: 60px 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(5px);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(76, 175, 80, 0.2);
-  margin-bottom: 30px;
-}
-
-.hero-section h1 {
-  font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.2;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
-}
-
-.url-input-container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.url-input-group {
+  font-size: 1.5rem;
+  color: var(--text-color);
   display: flex;
-  margin-bottom: 20px;
+  align-items: center;
 }
 
-.url-input-group input {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+.navbar-brand span {
+  color: var(--primary-color);
+  margin-left: 0.25rem;
 }
 
-.url-input-group button {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+.navbar-brand img {
+  height: 32px;
+  margin-right: 0.5rem;
 }
 
-.result-card {
-  max-width: 800px;
-  margin: 30px auto;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(76, 175, 80, 0.3);
+.nav-link {
+  color: var(--text-color) !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  margin: 0 0.25rem;
 }
 
-.score-indicator {
-  width: 100%;
-  height: 30px;
-  background-color: rgba(233, 236, 239, 0.2);
-  border-radius: 15px;
-  margin: 15px 0;
-  position: relative;
-  overflow: hidden;
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-color) !important;
+  background-color: rgba(76, 175, 80, 0.1);
 }
 
-.score-bar {
-  height: 100%;
-  border-radius: 15px;
-  transition: width 0.5s ease;
-  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
 }
 
-.score-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
-.dashboard-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
-  margin-bottom: 40px;
-}
-
-.stat-card {
+/* Hero section */
+.hero {
+  padding: 4rem 0;
   text-align: center;
-  padding: 25px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: var(--text-muted);
+}
+
+/* Cards */
+.card {
   background-color: var(--card-bg);
   border: 1px solid rgba(76, 175, 80, 0.2);
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: rgba(76, 175, 80, 0.4);
+}
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.card-footer {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(76, 175, 80, 0.2);
+  padding: 1rem 1.5rem;
+}
+
+/* Features section */
+.features {
+  padding: 4rem 0;
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.feature-text {
+  color: var(--text-muted);
+}
+
+/* Buttons */
+.btn {
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 230, 118, 0.2);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 230, 118, 0.2);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.btn-danger:hover, .btn-danger:focus {
+  background-color: #d32f2f;
+  border-color: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.2);
+}
+
+.btn-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0;
+}
+
+.btn-link:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Forms */
+.form-control {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+  color: var(--text-color);
+}
+
+.form-label {
+  color: var(--text-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-text {
+  color: var(--text-muted);
+}
+
+.input-group-text {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--text-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: rgba(18, 18, 18, 0.9);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(76, 175, 80, 0.2);
+  padding: 2rem 0 1rem;
+}
+
+.footer-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--primary-color);
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Alerts */
+.alert {
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  border: none;
+}
+
+.alert-success {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #81c784;
+  border-left: 4px solid var(--primary-color);
+}
+
+.alert-danger {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #e57373;
+  border-left: 4px solid var(--danger-color);
+}
+
+.alert-warning {
+  background-color: rgba(255, 152, 0, 0.1);
+  color: #ffb74d;
+  border-left: 4px solid #ff9800;
+}
+
+.alert-info {
+  background-color: rgba(33, 150, 243, 0.1);
+  color: #64b5f6;
+  border-left: 4px solid #2196f3;
+}
+
+/* Badges */
+.badge {
+  padding: 0.35em 0.65em;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.badge-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.badge-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+/* Tooltips */
+.tooltip {
+  font-size: 0.875rem;
+}
+
+.tooltip-inner {
+  background-color: rgba(18, 18, 18, 0.95);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  padding: 0.5rem 1rem;
+  max-width: 300px;
+}
+
+/* Modals */
+.modal-content {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  border-radius: 12px;
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+  padding: 1.25rem 1.5rem;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(76, 175, 80, 0.2);
+  padding: 1.25rem 1.5rem;
+}
+
+.btn-close {
+  filter: invert(1) brightness(0.8);
+  opacity: 0.7;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}
+
+/* Tables */
+.table {
+  color: var(--text-color);
+}
+
+.table th {
+  font-weight: 600;
+  border-bottom: 2px solid rgba(76, 175, 80, 0.2);
+  padding: 1rem;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table tbody tr:hover {
+  background-color: rgba(76, 175, 80, 0.05);
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 2rem;
+}
+
+.page-link {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  padding: 0.5rem 0.75rem;
+  margin: 0 0.25rem;
+  border-radius: 4px;
+}
+
+.page-link:hover {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--primary-color);
+  border-color: rgba(76, 175, 80, 0.2);
+}
+
+.page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+/* Dropdowns */
+.dropdown-menu {
+  background-color: var(--light-color);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--primary-color);
+}
+
+.dropdown-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Progress bars */
+.progress {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  height: 0.5rem;
+}
+
+.progress-bar {
+  background-color: var(--primary-color);
+}
+
+/* Spinners */
+.spinner-border, .spinner-grow {
+  color: var(--primary-color);
+}
+
+/* Toasts */
+.toast {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  border-radius: 8px;
+}
+
+.toast-header {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+  color: var(--text-color);
+}
+
+/* List groups */
+.list-group-item {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+}
+
+.list-group-item.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+
+.breadcrumb-item {
+  color: var(--text-muted);
+}
+
+.breadcrumb-item.active {
+  color: var(--text-color);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--text-muted);
+}
+
+/* Custom styles for the app */
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.auth-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.auth-subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+}
+
+.auth-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.url-input {
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+}
+
+.url-input:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+}
+
+.scan-btn {
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.scan-btn:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 230, 118, 0.2);
+}
+
+.result-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  background-color: var(--card-bg);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.result-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.result-body {
+  padding: 1.5rem;
+}
+
+.result-footer {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(76, 175, 80, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.result-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.result-url {
+  color: var(--primary-color);
+  word-break: break-all;
+}
+
+.result-score {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.score-high {
+  color: #f44336;
+}
+
+.score-medium {
+  color: #ff9800;
+}
+
+.score-low {
+  color: #4caf50;
+}
+
+.result-details {
+  margin-top: 1.5rem;
+}
+
+.detail-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.detail-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.detail-text {
+  color: var(--text-muted);
+}
+
+.evidence-item {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.evidence-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.evidence-text {
+  color: var(--text-muted);
+  font-family: monospace;
+  white-space: pre-wrap;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.dashboard-subtitle {
+  color: var(--text-muted);
+}
+
+.stats-card {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: rgba(76, 175, 80, 0.4);
+}
+
+.stat-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.recent-scans {
+  margin-top: 2rem;
+}
+
+.scan-item {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.scan-item:hover {
+  background-color: rgba(76, 175, 80, 0.05);
+  border-color: rgba(76, 175, 80, 0.2);
+}
+
+.scan-date {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.scan-url {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  word-break: break-all;
+}
+
+.scan-result {
+  font-weight: 600;
+}
+
+.watchlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.watchlist-title {
+  font-weight: 700;
+  margin-bottom: 0;
+  color: var(--text-color);
+}
+
+.watchlist-item {
+  padding: 1.25rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: var(--card-bg);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  transition: all 0.3s ease;
+}
+
+.watchlist-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-color: rgba(76, 175, 80, 0.4);
+}
+
+.watchlist-url {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  word-break: break-all;
+}
+
+.watchlist-date {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.watchlist-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.feedback-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.feedback-btn:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.feedback-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.feedback-title {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.feedback-textarea {
+  min-height: 150px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.feedback-textarea:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+}
+
+.loading-spinner {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
+  padding: 2rem;
 }
 
-.stat-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--primary-color);
-  opacity: 0.7;
-}
-
-.stat-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.stat-card i {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: var(--primary-color);
-  filter: drop-shadow(0 0 5px rgba(76, 175, 80, 0.5));
-}
-
-.stat-value {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--text-color);
-  margin: 10px 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.stat-label {
-  color: #000000; /* Black color for stat labels */
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.loading-text {
+  margin-top: 1rem;
+  color: var(--text-muted);
   font-weight: 500;
 }
 
-.watchlist-table th {
-  background-color: rgba(18, 18, 18, 0.7);
-  color: white;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+.error-message {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #e57373;
+  border-left: 4px solid var(--danger-color);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
 }
 
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+.success-message {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #81c784;
+  border-left: 4px solid var(--primary-color);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
 }
 
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted);
 }
 
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
 }
 
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  background-color: var(--card-bg);
-  border: 1px solid rgba(76, 175, 80, 0.2);
+.empty-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
   color: var(--text-color);
-  backdrop-filter: blur(10px);
 }
 
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+.empty-text {
+  margin-bottom: 1.5rem;
 }
 
-.footer {
-  margin-top: auto;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.25rem;
+  }
+  
+  .result-score {
+    font-size: 2rem;
+  }
+  
+  .feedback-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
 }
 
-/* List group styling */
-.list-group-item {
-  background-color: rgba(26, 26, 26, 0.6);
-  border-color: rgba(76, 175, 80, 0.2);
-  color: #e8e8e8; /* Brighter than --text-color for better readability */
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  font-weight: 500;
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+  
+  .result-header, .result-body, .result-footer {
+    padding: 1.25rem;
+  }
+  
+  .watchlist-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .watchlist-actions .btn {
+    width: 100%;
+  }
 }
 
-/* Table styling */
-.table {
-  color: #e8e8e8; /* Brighter than --text-color for better readability */
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.table td, .table th {
-  border-color: rgba(76, 175, 80, 0.2);
-  vertical-align: middle;
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-/* Badge styling */
-.badge {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
 @keyframes pulse {
   0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
   }
   100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
   }
 }
 
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
 }
 
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
+.slide-up {
+  animation: slideUp 0.5s ease forwards;
 }
 
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
+.pulse {
+  animation: pulse 2s infinite;
 }
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000000; /* Black color for stat values */
-}
-
-.watchlist-table th {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.risk-badge {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.risk-high {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.risk-medium {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.risk-low {
-  background-color: var(--success-color);
-  color: white;
-}
-
-/* Add pulse animation for glowing text effect */
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.6),
-                 0 0 40px rgba(255, 255, 255, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.9),
-                 0 0 35px rgba(255, 255, 255, 0.7),
-                 0 0 45px rgba(255, 255, 255, 0.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-.auth-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.auth-form .form-check-label,
-.auth-form label,
-.auth-form a,
-.auth-form p {
-  color: #000000;
-}
-
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font
