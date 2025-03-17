@@ -9,6 +9,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './fixes.css'; // Import the fixes CSS file
 import './production.css'; // Import consolidated production CSS
 import './background-fix.css'; // Critical background fixes with highest priority
+import './modal-fix.css'; // Modal styling fixes
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -7,6 +7,7 @@ import Watchlist from './pages/Watchlist';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Background3D from './components/Background3D';
+import Background3DFix from './components/Background3DFix';
 import FeedbackButton from './components/FeedbackButton';
 import { AuthProvider } from './context/AuthContext';
 import { AnalysisProvider } from './context/AnalysisContext';
@@ -19,6 +20,7 @@ function App() {
       <AnalysisProvider>
         <div className="app">
         <Background3D />
+        <Background3DFix />
         <Navbar />
         <main className="container mt-4">
           <Routes>
@@ -66,7 +68,7 @@ function App() {
               </div>
             </div>
             <div className="border-top mt-4 pt-3" style={{ borderColor: 'var(--border-color)' }}>
-              <p className="text-center mb-0" style={{ color: 'var(--text-color)' }}>© 2025 <span style={{ color: 'white' }}>ScamShield</span></p>
+              <p className="text-center mb-0" style={{ color: 'var(--text-color)' }}> 2025 <span style={{ color: 'white' }}>ScamShield</span></p>
             </div>
           </div>
         </footer>
