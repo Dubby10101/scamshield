@@ -10,6 +10,7 @@ import './fixes.css'; // Import the fixes CSS file
 import './production.css'; // Import consolidated production CSS
 import './background-fix.css'; // Critical background fixes with highest priority
 import './modal-fix.css'; // Modal styling fixes
+import './force-styles.css'; // Force all styles with highest priority
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

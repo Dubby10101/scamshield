@@ -15,6 +15,7 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
+    "build:prod": "node build-production.js",
     "preview": "vite preview"
   },
   "devDependencies": {
