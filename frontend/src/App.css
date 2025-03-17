@@ -1,0 +1,4546 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.navbar-brand i {
+  color: var(--secondary-color);
+  margin-right: 8px;
+}
+
+/* Form label readability */
+.form-check-label, .form-label {
+  color: #000000;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Dashboard specific styles */
+.dashboard-title {
+  color: #ffffff; /* White color for 'User Dashboard' */
+}
+
+.dashboard-form-label {
+  color: #000000; /* Black color for form labels */
+  font-weight: 500;
+}
+
+.dashboard-form-check-label {
+  color: #000000; /* Black color for form check labels */
+  font-weight: 500;
+}
+
+/* Heading enhancements */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+.auth-form h1, .auth-form h2, .auth-form h3, .auth-form h4, .auth-form h5, .auth-form h6 {
+  color: #000000;
+}
+
+.hero-section {
+  background-color: rgba(18, 18, 18, 0.3);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  margin-bottom: 30px;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.url-input-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.url-input-group {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.url-input-group input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.url-input-group button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.result-card {
+  max-width: 800px;
+  margin: 30px auto;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.score-indicator {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(233, 236, 239, 0.2);
+  border-radius: 15px;
+  margin: 15px 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.score-bar {
+  height: 100%;
+  border-radius: 15px;
+  transition: width 0.5s ease;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.score-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 25px;
+  background-color: var(--card-bg);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.stat-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-color);
+  opacity: 0.7;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.stat-card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  filter: drop-shadow(0 0 5px rgba(76, 175, 80, 0.5));
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 10px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stat-label {
+  color: #000000; /* Black color for stat labels */
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.watchlist-table th {
+  background-color: rgba(18, 18, 18, 0.7);
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  background-color: var(--card-bg);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  color: var(--text-color);
+  backdrop-filter: blur(10px);
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+  margin-top: auto;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* List group styling */
+.list-group-item {
+  background-color: rgba(26, 26, 26, 0.6);
+  border-color: rgba(76, 175, 80, 0.2);
+  color: #e8e8e8; /* Brighter than --text-color for better readability */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+}
+
+/* Table styling */
+.table {
+  color: #e8e8e8; /* Brighter than --text-color for better readability */
+}
+
+.table td, .table th {
+  border-color: rgba(76, 175, 80, 0.2);
+  vertical-align: middle;
+}
+
+/* Badge styling */
+.badge {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000; /* Black color for stat values */
+}
+
+.watchlist-table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.risk-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.risk-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.risk-medium {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.risk-low {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Add pulse animation for glowing text effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6),
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.9),
+                 0 0 35px rgba(255, 255, 255, 0.7),
+                 0 0 45px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.auth-form .form-check-label,
+.auth-form label,
+.auth-form a,
+.auth-form p {
+  color: #000000;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font

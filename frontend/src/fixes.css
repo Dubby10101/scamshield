@@ -1,0 +1,346 @@
+/* Styling fixes for ScamShield to match reference frontend */
+
+/* Global color overrides to match reference */
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #8bc34a;
+  --accent-color: #00e676;
+  --danger-color: #f44336;
+  --success-color: #4caf50;
+  --dark-color: #121212;
+  --darker-color: #0a0a0a;
+  --light-color: #1e1e1e;
+  --gray-color: #6c757d;
+  --text-color: #e0e0e0;
+  --text-muted: #b0b0b0;
+  --border-color: #333333;
+  --card-bg: rgba(26, 26, 26, 0.85);
+  --highlight-color: #4caf50;
+  --grid-bg-color: rgba(76, 175, 80, 0.05);
+}
+
+/* Body background override */
+body {
+  background-color: var(--dark-color);
+  color: var(--text-color);
+  background-image: linear-gradient(rgba(76, 175, 80, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(76, 175, 80, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Fix form label readability issues */
+.form-check-label, .form-label {
+  color: var(--text-color) !important;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Ensure Bootstrap styles don't override our custom styles */
+.btn-success {
+  background-color: var(--success-color) !important;
+  border-color: var(--success-color) !important;
+}
+
+/* Fix card background opacity for better readability */
+.card {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(76, 175, 80, 0.2) !important;
+  overflow: hidden !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Ensure text color consistency */
+.text-white {
+  color: #ffffff !important;
+}
+
+/* Fix stat label readability */
+.stat-label {
+  color: var(--text-color) !important;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Fix dashboard form labels */
+.dashboard-form-label, .dashboard-form-check-label {
+  color: var(--text-color) !important;
+}
+
+/* Fix navbar styling */
+.navbar {
+  background-color: rgba(10, 10, 10, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+  padding: 0.75rem 1rem;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--primary-color) !important;
+}
+
+.navbar-brand i {
+  color: var(--secondary-color);
+  margin-right: 8px;
+}
+
+.nav-link {
+  color: var(--text-color) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem !important;
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: var(--primary-color) !important;
+}
+
+.nav-link.active {
+  color: var(--primary-color) !important;
+  font-weight: 600;
+}
+
+/* Fix button styling */
+.btn {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #43a047 !important;
+  border-color: #43a047 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* Fix hero section styling */
+.hero-section {
+  background-color: rgba(18, 18, 18, 0.3) !important;
+  color: white !important;
+  padding: 60px 0 !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  backdrop-filter: blur(5px) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(76, 175, 80, 0.2) !important;
+  margin-bottom: 30px !important;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 20px !important;
+  line-height: 1.2 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Fix input fields */
+.form-control {
+  background-color: rgba(42, 42, 42, 0.8) !important;
+  color: var(--text-color) !important;
+  border-color: rgba(76, 175, 80, 0.3) !important;
+  border-radius: 30px !important;
+  padding: 0.75rem 1.25rem !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-control:focus {
+  background-color: rgba(42, 42, 42, 0.9) !important;
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25) !important;
+}
+
+/* Fix URL input styling */
+.url-input-group {
+  display: flex !important;
+  margin-bottom: 20px !important;
+}
+
+.url-input-group input {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.url-input-group button {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  padding: 0.75rem 2rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3) !important;
+}
+
+/* Fix placeholder text */
+::placeholder {
+  color: rgba(224, 224, 224, 0.6) !important;
+}
+
+/* Fix table styling */
+.table {
+  color: var(--text-color) !important;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.table th {
+  background-color: rgba(18, 18, 18, 0.7) !important;
+  color: white !important;
+  border-bottom: none !important;
+  padding: 12px 16px !important;
+  font-weight: 600 !important;
+}
+
+.table td {
+  background-color: rgba(30, 30, 30, 0.6) !important;
+  border-top: none !important;
+  padding: 12px 16px !important;
+  vertical-align: middle !important;
+}
+
+.table tr:hover td {
+  background-color: rgba(76, 175, 80, 0.1) !important;
+}
+
+/* Fix modal styling */
+.modal-content {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border: 1px solid rgba(76, 175, 80, 0.3) !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(76, 175, 80, 0.2) !important;
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(76, 175, 80, 0.2) !important;
+}
+
+/* Fix dropdown styling */
+.dropdown-menu {
+  background-color: rgba(26, 26, 26, 0.95) !important;
+  border: 1px solid rgba(76, 175, 80, 0.3) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.dropdown-item {
+  color: var(--text-color) !important;
+  padding: 0.5rem 1.25rem !important;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(76, 175, 80, 0.2) !important;
+}
+
+/* Fix result card styling */
+.result-card {
+  max-width: 800px !important;
+  margin: 30px auto !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(76, 175, 80, 0.3) !important;
+}
+
+.score-indicator {
+  width: 100% !important;
+  height: 30px !important;
+  background-color: rgba(233, 236, 239, 0.2) !important;
+  border-radius: 15px !important;
+  margin: 15px 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+}
+
+.score-bar {
+  height: 100% !important;
+  border-radius: 15px !important;
+  transition: width 0.5s ease !important;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5) !important;
+}
+
+.score-text {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  color: white !important;
+  font-weight: bold !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Fix footer styling */
+.footer {
+  background-color: rgba(10, 10, 10, 0.7) !important;
+  backdrop-filter: blur(10px) !important;
+  border-top: 1px solid rgba(76, 175, 80, 0.2) !important;
+  padding: 15px 0 !important;
+  margin-top: 3rem !important;
+}
+
+/* Fix dashboard stats styling */
+.dashboard-stats {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+  gap: 25px !important;
+  margin-bottom: 40px !important;
+}
+
+.stat-card {
+  text-align: center !important;
+  padding: 25px !important;
+  background-color: var(--card-bg) !important;
+  border: 1px solid rgba(76, 175, 80, 0.2) !important;
+  border-radius: 12px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.stat-card::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 3px !important;
+  background: var(--primary-color) !important;
+  opacity: 0.7 !important;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.stat-value {
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  color: var(--text-color) !important;
+  margin: 10px 0 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
